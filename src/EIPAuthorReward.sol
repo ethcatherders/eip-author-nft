@@ -209,9 +209,11 @@ contract EIPAuthorReward is
         if (_claimed[author][claimable.id]) {
             revert AlreadyClaimed(author, claimable.id);
         }
-        bytes32 hash = _hashClaimableStruct(claimable);
-        if (!_isValidSignature(owner(), hash, signature)) {
-            revert InvalidSignature();
+        if (owner() != msg.sender) {
+            bytes32 hash = _hashClaimableStruct(claimable);
+            if (!_isValidSignature(owner(), hash, signature)) {
+                revert InvalidSignature();
+            }
         }
         _claimed[author][claimable.id] = true;
         _supply++;

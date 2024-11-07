@@ -62,6 +62,15 @@ contract EIPAuthorRewardTest is BaseTest {
         assertEq(reward.balanceOf(sender, id), 1);
     }
 
+    function test_claim_asOwner() public {
+        address recipient = vm.addr(3);
+
+        vm.prank(owner);
+        reward.claim(EIPAuthorReward.Claimable({id: 1, author: "author", to: recipient}), "");
+
+        assertEq(reward.balanceOf(recipient, 1), 1);
+    }
+
     function test_claimed() public {
         _signAndExecuteClaim(
             reward, 
