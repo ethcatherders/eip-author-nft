@@ -1,19 +1,21 @@
-## Foundry
+# EIP Author NFT
 
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+An ERC1155 NFT collection for rewarding authors of EIPs included in Ethereum network upgrades. Each `tokenId` represents a specific Network Upgrade and claimable by verifying the author's GitHub username cited in the EIP considered for inclusion.
 
-Foundry consists of:
+### Deployed on
 
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+| Network | Address |
+| ------- | ------- |
+| Base Mainnet | [0xD5763b8044dc4998737A8D506e612B3BF2821cf9](https://basescan.org/token/0xd5763b8044dc4998737a8d506e612b3bf2821cf9) |
 
-## Documentation
 
-https://book.getfoundry.sh/
+### Claimable for
+All authors of EIPs included in the following Network Upgrades:
+- **Pectra**: Check you eligibility and claim on [ethcatherders.com](https://www.ethcatherders.com/upgrades/pectra)
 
 ## Usage
+
+The smart contracts are built and tested with [Foundry](https://book.getfoundry.sh/).
 
 ### Build
 

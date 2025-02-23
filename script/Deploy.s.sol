@@ -8,7 +8,7 @@ contract Deploy is Script {
     function run() external returns (EIPAuthorReward nft, address owner) {
         string memory name = "EIP Author Reward";
         string memory symbol = "EIP";
-        owner = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266;
+        owner = 0xB447E28C6894Acd85594cF057E6E3C622493F03b;
 
         uint256 deployerPrivateKey = vm.envUint("DEPLOYER_PRIVATE_KEY");
 
